@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+
+
+
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/style.css">
+ <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!--<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>-->
+ 
+  
+
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+  <div class="card-header">RAISE A TICKET</div>
+  <div class="card-body">
+  	<form id="add-ticket">
+  <fieldset>
+      <div class="form-group">
+      <label for="exampleInputEmail1">Firstname:</label>
+      <input type="text" name="firstname" class="form-control" id=""  placeholder="Enter Firstname">
+    </div>
+
+
+      <div class="form-group">
+      <label for="exampleInputEmail1">Lastname:</label>
+      <input type="text" name="lastname" class="form-control" id=""  placeholder="Enter Lastname">
+    </div>
+
+ <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+ <div class="form-group">
+      <label for="exampleSelect1">Location:</label>
+      <select class="form-control" id="" name="location">
+        <option>Primary</option>
+        <option>Nursery</option>
+        <option>Dsens</option>
+        <option>Sixthform</option>
+        <option>College</option>
+       
+      </select>
+    </div>
+
+ <div class="form-group">
+      <label for="exampleSelect1">Department:</label>
+      <select class="form-control" id="" name="department">
+        <option>Admin</option>
+        <option>College Maths</option>
+       
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleSelect1">Priority:</label>
+      <select class="form-control" id="" name="priority">
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>     
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Subject:</label>
+      <input name="subject" type="text" class="form-control" id=""  placeholder="Enter Lastname">
+    </div>
+
+   
+    <div class="form-group">
+      <label for="exampleTextarea">Message:</label>
+      <textarea class="form-control" id="exampleTextarea" rows="6" name="message"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </fieldset>
+</form>
+  </div>
+  <div class="card-footer">Footer</div>
+</div>
+			
+		</div>
+		
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
+ 
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBaTMAPXAejBG7Eu-DDxr9ULk0samf0YOI",
+    authDomain: "ticket-273aa.firebaseapp.com",
+    databaseURL: "https://ticket-273aa.firebaseio.com",
+    projectId: "ticket-273aa",
+    storageBucket: "ticket-273aa.appspot.com",
+    messagingSenderId: "70424294634",
+    appId: "1:70424294634:web:8dc255a31d2a2dc91b5393",
+    measurementId: "G-M4F50XL7P8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+ const db= firebase.firestore();
+ db.settings({});
+</script>
+ 
+ <script src="js/write.js"></script>
+
+
+</body>
+</html>
